@@ -3,6 +3,7 @@ using RenderService.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplicationInsightsTelemetry();
+builder.Services.AddApplicationInsightsTelemetryWorkerService();
 
 // Add services to the container.
 

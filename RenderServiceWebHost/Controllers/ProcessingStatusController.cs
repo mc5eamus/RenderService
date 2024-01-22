@@ -21,7 +21,9 @@ namespace RenderServiceWebHost.Controllers
         [HttpGet(Name = "GetProcessingStatus")]
         public string Get()
         {
-            return qs.GetStatus();
+            var status = qs.GetStatus();
+            logger.LogInformation($"processing status = {status}");
+            return status;
         }
     }
 }
